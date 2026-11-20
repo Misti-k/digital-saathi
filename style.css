@@ -1,0 +1,173 @@
+/* Digital Saathi - simple, accessible styling */
+:root {
+  --ink: #17324d;
+  --muted: #4b6074;
+  --primary: #145b53;
+  --primary-dark: #0e453f;
+  --accent: #f4c66a;
+  --paper: #ffffff;
+  --soft: #f1f7f5;
+  --line: #d7e3df;
+  --success: #155b36;
+  --error: #8b2424;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 18px;
+  line-height: 1.65;
+}
+button, input, select { font: inherit; }
+button, a, input, select { touch-action: manipulation; }
+a { color: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #b66a00;
+  outline-offset: 3px;
+}
+.container { width: min(1120px, calc(100% - 36px)); margin-inline: auto; }
+.site-header { background: #fff; border-bottom: 1px solid var(--line); }
+.header-row { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 22px; flex-wrap: wrap; padding-block: 14px; }
+.logo { font-size: 1.35rem; font-weight: 800; text-decoration: none; color: var(--primary); }
+nav { display: flex; flex-wrap: wrap; gap: 18px; }
+nav a { font-weight: 700; text-decoration: none; padding: 8px 0; }
+nav a:hover { text-decoration: underline; }
+.accessibility-controls { display: flex; gap: 7px; }
+button { cursor: pointer; }
+.small-button { border: 1px solid #9db7b0; background: white; color: var(--ink); border-radius: 9px; padding: 8px 12px; font-weight: 700; }
+.small-button:hover, .outline-button:hover { background: #e9f3ef; }
+.hero { background: var(--soft); padding: 64px 0; }
+.hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 42px; align-items: center; }
+.eyebrow { color: var(--primary); font-size: .8rem; font-weight: 800; letter-spacing: .09em; margin: 0 0 8px; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.12; max-width: 700px; margin-bottom: 20px; }
+h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1.2; margin-bottom: 14px; }
+h3 { font-size: 1.25rem; line-height: 1.3; }
+.hero-copy { font-size: 1.15rem; color: var(--muted); max-width: 640px; margin-bottom: 28px; }
+.button-link { display: inline-block; background: var(--primary); color: white; border: 2px solid var(--primary); border-radius: 10px; padding: 12px 20px; text-decoration: none; font-weight: 800; }
+.button-link:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+.hero-card { background: white; border: 1px solid var(--line); border-radius: 22px; padding: 28px; box-shadow: 0 12px 28px rgba(23, 50, 77, .07); }
+.hero-icon { display: block; font-size: 3.3rem; margin-bottom: 12px; }
+.hero-card p { color: var(--muted); margin-bottom: 0; }
+.section { padding-top: 70px; padding-bottom: 70px; }
+.section-heading { max-width: 700px; margin-bottom: 28px; }
+.section-heading > p:last-child { color: var(--muted); }
+.lesson-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lesson-card { border: 1px solid var(--line); border-radius: 16px; padding: 24px; background: #fff; }
+.lesson-card p { color: var(--muted); min-height: 86px; }
+.lesson-icon { font-size: 2.2rem; display: inline-block; margin-bottom: 12px; }
+.outline-button { background: white; border: 2px solid var(--primary); color: var(--primary); border-radius: 10px; padding: 10px 15px; font-weight: 800; }
+.lesson-detail { margin-top: 24px; padding: 24px; border: 2px solid var(--primary); border-radius: 16px; background: #f8fcfa; }
+.detail-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.lesson-detail li { margin-bottom: 10px; }
+.safety-section { background: #173b52; color: white; padding: 64px 0; }
+.safety-section .eyebrow { color: var(--accent); }
+.safety-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.safety-grid p { color: #e0eaf0; }
+.safety-list { list-style: none; padding: 0; margin: 0; }
+.safety-list li { padding: 12px 0; border-bottom: 1px solid #547080; }
+.safety-list li span { color: var(--accent); font-weight: 900; margin-right: 10px; }
+.quiz-card { max-width: 780px; padding: 28px; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 8px 24px rgba(23, 50, 77, .05); }
+.question-count { color: var(--muted); font-weight: 700; font-size: .9rem; }
+.answer-options { display: grid; gap: 12px; margin: 24px 0; }
+.answer-button { text-align: left; padding: 13px 16px; border: 2px solid #b8c9c4; border-radius: 10px; color: var(--ink); background: white; }
+.answer-button:hover:not(:disabled) { background: var(--soft); border-color: var(--primary); }
+.answer-button:disabled { cursor: default; opacity: .85; }
+.answer-button.correct { border-color: #21804b; background: #e7f7ec; }
+.answer-button.incorrect { border-color: #b23a3a; background: #fff0f0; }
+.quiz-feedback { font-weight: 700; min-height: 1.7em; }
+.quiz-feedback.good { color: var(--success); }
+.quiz-feedback.bad { color: var(--error); }
+.quiz-footer { display: flex; justify-content: space-between; align-items: center; gap: 15px; border-top: 1px solid var(--line); padding-top: 18px; }
+.button-small { padding: 9px 14px; }
+.button-link:disabled { opacity: .5; cursor: not-allowed; }
+.help-section { background: var(--soft); padding: 64px 0; }
+.help-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.help-form { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: grid; gap: 10px; }
+.help-form label { font-weight: 800; }
+.help-form input, .help-form select { width: 100%; min-height: 48px; padding: 10px 12px; border: 1px solid #879d95; border-radius: 8px; color: var(--ink); background: white; }
+.help-form .button-link { margin-top: 10px; justify-self: start; }
+#formMessage { margin-bottom: 0; font-weight: 700; color: var(--success); }
+footer { background: #102b40; color: white; padding: 24px 0; }
+.footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.footer-row p { margin: 0; }
+.footer-note { color: #d5e1e8; font-size: .9rem; }
+
+@media (max-width: 800px) {
+  .header-row { align-items: flex-start; }
+  nav { order: 3; width: 100%; gap: 14px; }
+  .hero-grid, .safety-grid, .help-grid { grid-template-columns: 1fr; gap: 28px; }
+  .lesson-grid { grid-template-columns: 1fr; }
+  .lesson-card p { min-height: 0; }
+  .hero { padding: 46px 0; }
+}
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .container { width: min(100% - 26px, 1120px); }
+  .accessibility-controls { width: 100%; }
+  .small-button { padding: 8px 10px; }
+  .section { padding-block: 48px; }
+  .quiz-card, .lesson-card, .hero-card, .help-form { padding: 20px; }
+  .quiz-footer { align-items: flex-start; flex-direction: column; }
+}
+
+/* Additional polish: stronger contrast, clearer interactive states, and language control. */
+:root { --primary: #176b5b; --primary-dark: #104d42; --soft: #edf7f3; --accent: #ffd36e; }
+.lesson-card, .quiz-card, .help-form, .hero-card { box-shadow: 0 8px 22px rgba(23, 50, 77, .06); }
+.lesson-card { transition: transform .18s ease, box-shadow .18s ease; }
+.lesson-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(23, 50, 77, .10); }
+button:disabled { opacity: .62; cursor: not-allowed; }
+#languageToggle { border-color: var(--primary); color: var(--primary); }
+#languageToggle:hover { background: var(--soft); }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+
+
+/* Reference photos shown alongside dynamically generated lesson steps. */
+.lesson-step { margin: 0 0 22px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.lesson-step p { margin: 0 0 12px; }
+.lesson-step-image { display: block; width: min(100%, 420px); max-height: 260px; object-fit: contain; object-position: left center; border-radius: 10px; background: var(--soft); }
+.lesson-step-image[hidden] { display: none; }
+#lessonSteps { padding-left: 28px; }
+
+
+/* Photo-led lesson steps: clear, high-contrast cards for senior learners. */
+#lessonSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 16px;
+  padding-left: 0;
+  list-style-position: inside;
+  margin: 18px 0 22px;
+}
+.lesson-step {
+  min-width: 0;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(23, 50, 77, .06);
+}
+.lesson-step::marker { color: var(--primary); font-weight: 800; }
+.lesson-step p { display: inline; font-weight: 700; line-height: 1.45; }
+.lesson-step-image {
+  display: block;
+  width: 100%;
+  max-height: none;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 12px;
+  border: 1px solid #e2e9e6;
+  border-radius: 10px;
+  background: var(--soft);
+}
+@media (max-width: 560px) {
+  #lessonSteps { grid-template-columns: 1fr; }
+  .lesson-step-image { aspect-ratio: 16 / 9; }
+}

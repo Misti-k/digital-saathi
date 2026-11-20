@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Saathi | Digital Literacy for Senior Citizens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="#home" aria-label="Digital Saathi home">Digital Saathi</a>
+      <nav aria-label="Main navigation">
+        <a href="#lessons">Lessons</a>
+        <a href="#safety">Online Safety</a>
+        <a href="#quiz">Quiz</a>
+        
+      </nav>
+      <div class="accessibility-controls" aria-label="Text size controls">
+        <button class="small-button" id="smallerText" type="button" aria-label="Decrease text size">A−</button>
+        <button class="small-button" id="largerText" type="button" aria-label="Increase text size">A+</button>
+        <button class="small-button" id="readWelcome" type="button">🔊 Read</button>
+        <button class="small-button" id="languageToggle" type="button" aria-label="Switch language">हिन्दी</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">LEARN AT YOUR OWN PACE</p>
+          <h1 data-en="Technology is for everyone." data-hi="तकनीक सबके लिए है।">Technology is for everyone.</h1>
+          <p class="hero-copy" data-en="Learn to use your phone, explore the internet, and stay safe online with simple step-by-step lessons." data-hi="अपने फोन का उपयोग करना, इंटरनेट चलाना और आसान चरणों में ऑनलाइन सुरक्षित रहना सीखें।">Learn to use your phone, explore the internet, and stay safe online with simple step-by-step lessons.</p>
+          <a class="button-link" href="#lessons" data-en="Start Learning" data-hi="सीखना शुरू करें">Start Learning</a>
+        </div>
+        <div class="hero-card" aria-label="Learning message">
+          <span class="hero-icon" aria-hidden="true">📱</span>
+          <h2 data-en="One small step at a time" data-hi="एक बार में एक छोटा कदम">One small step at a time</h2>
+          <p data-en="No experience needed. Practice, learn, and grow with confidence." data-hi="पहले से अनुभव होना ज़रूरी नहीं। अभ्यास करें और आत्मविश्वास से सीखें।">No experience needed. Practice, learn, and grow with confidence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="lessons">
+      <div class="section-heading">
+        <p class="eyebrow">LEARNING CORNER</p>
+        <h2 data-en="Choose a lesson" data-hi="एक पाठ चुनें">Choose a lesson</h2>
+        <p data-en="Start with a topic that is useful in everyday life." data-hi="रोज़मर्रा के जीवन में उपयोगी विषय से शुरुआत करें।">Start with a topic that is useful in everyday life.</p>
+      </div>
+      <div class="lesson-grid">
+        <article class="lesson-card">
+          <span class="lesson-icon" aria-hidden="true">📞</span>
+          <h3>Smartphone Basics</h3>
+          <p>Save a contact, send a message, and make a video call.</p>
+          <button class="outline-button lesson-button" data-lesson="phone" type="button">Open lesson</button>
+        </article>
+        <article class="lesson-card">
+          <span class="lesson-icon" aria-hidden="true">🌐</span>
+          <h3>Using the Internet</h3>
+          <p>Open a browser and search for information carefully.</p>
+          <button class="outline-button lesson-button" data-lesson="internet" type="button">Open lesson</button>
+        </article>
+        <article class="lesson-card">
+          <span class="lesson-icon" aria-hidden="true">✉️</span>
+          <h3>Email Basics</h3>
+          <p>Understand an email, its subject, and its attachments.</p>
+          <button class="outline-button lesson-button" data-lesson="email" type="button">Open lesson</button>
+        </article>
+        <article class="lesson-card">
+          <span class="lesson-icon" aria-hidden="true">💳</span>
+          <h3>Digital Payments</h3>
+          <p>Learn basic precautions before using UPI or other payment apps.</p>
+          <button class="outline-button lesson-button" data-lesson="payments" type="button">Open lesson</button>
+        </article>
+        <article class="lesson-card">
+          <span class="lesson-icon" aria-hidden="true">🔎</span>
+          <h3>Spotting Fake Messages</h3>
+          <p>Recognize common warning signs in suspicious calls and messages.</p>
+          <button class="outline-button lesson-button" data-lesson="scams" type="button">Open lesson</button>
+        </article>
+      </div>
+      <div class="lesson-detail" id="lessonDetail" hidden aria-live="polite">
+        <div class="detail-heading">
+          <h3 id="lessonTitle">Lesson</h3>
+          <button id="closeLesson" class="small-button" type="button" aria-label="Close lesson">✕ Close</button>
+        </div>
+        <ol id="lessonSteps"></ol>
+        <button id="readLesson" class="outline-button" type="button">🔊 Read this lesson aloud</button>
+      </div>
+    </section>
+
+    <section class="safety-section" id="safety">
+      <div class="container safety-grid">
+        <div>
+          <p class="eyebrow">STAY SAFE ONLINE</p>
+          <h2 data-en="Pause before you tap." data-hi="क्लिक करने से पहले रुकें।">Pause before you tap.</h2>
+          <p data-en="Scammers may pretend to be banks, delivery companies, or government offices. Take your time and ask someone you trust if something feels suspicious." data-hi="धोखेबाज़ बैंक, डिलीवरी कंपनी या सरकारी कर्मचारी बनकर बात कर सकते हैं। जल्दबाज़ी न करें और संदेह होने पर भरोसेमंद व्यक्ति से पूछें।">Scammers may pretend to be banks, delivery companies, or government offices. Take your time and ask someone you trust if something feels suspicious.</p>
+        </div>
+        <ul class="safety-list">
+          <li><span aria-hidden="true">✓</span> Never share your OTP, PIN, or password.</li>
+          <li><span aria-hidden="true">✓</span> Do not click unexpected or suspicious links.</li>
+          <li><span aria-hidden="true">✓</span> Verify requests for money using a trusted phone number.</li>
+          <li><span aria-hidden="true">✓</span> Never install an app because a stranger tells you to.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container section" id="quiz">
+      <div class="section-heading">
+        <p class="eyebrow">PRACTICE TIME</p>
+        <h2 data-en="Quick safety quiz" data-hi="ऑनलाइन सुरक्षा प्रश्नोत्तरी">Quick safety quiz</h2>
+        <p data-en="Choose an answer. You will see feedback right away." data-hi="उत्तर चुनें। आपको तुरंत प्रतिक्रिया मिलेगी।">Choose an answer. You will see feedback right away.</p>
+      </div>
+      <div class="quiz-card">
+        <p class="question-count" id="questionCount">Question 1 of 3</p>
+        <h3 id="questionText">A caller says they are from your bank and asks for your OTP. What should you do?</h3>
+        <div class="answer-options" id="answerOptions">
+          <button class="answer-button" data-answer="0" type="button">Share the OTP</button>
+          <button class="answer-button" data-answer="1" type="button">Do not share it</button>
+          <button class="answer-button" data-answer="2" type="button">Send it by message</button>
+        </div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+        <div class="quiz-footer">
+          <span id="scoreText">Score: 0</span>
+          <button class="button-link button-small" id="nextQuestion" type="button" disabled>Next question</button>
+        </div>
+      </div>
+    </section>
+
+    
+     
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <p><strong>Digital Saathi</strong> — Learning has no age limit.</p>
+      <p class="footer-note">A student project to promote digital confidence and online safety.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
